@@ -1,6 +1,7 @@
-from rich import print
-import typer
-from typing import Optional
+from rich import print # to be able to style and color the terminal outputs
+import typer #typer library that helps build CLI apps using python functions 
+from typing import Optional #allows for function arguments to be optional
+from pathlib import Path # A way for python to handle file and folder paths  
 
 app = typer.Typer()
 
@@ -30,6 +31,14 @@ def erase(id: Optional[str] = typer.Option(None, help="Delete session by its ID 
                   ):
     #reset chats history, by its ID, by time, or just in all. Offers soft delete after 30 days will give it full hard delete. Or you can do a force hard delete
     print("[yellow] Reset history activated...[/]")
+
+@app.command()
+def scan(path: Path = typer.Argument(..., help="The file or Folder your scanning"), # path: file or folder path, pathlib.Path object
+         recursive: bool = typer.Option(False, "--recursive", "-r", help="Recusive scan on folders"),
+         summarize: bool = typer.Option(False, "--summarize", "-s", help="Summarize the contents"), 
+         ):
+    #Use to scan files and folders and then passes the scanned contents to Sage
+    print(f"[green]Scanning {path}...[/]")
 
 if __name__ == "__main__":
     app()
