@@ -5,3 +5,7 @@ __pycache__/
 dist/
 build/
 .eggs/
+.env
+.venv/
+models/deepseek-r1-0528/
+*.gguf

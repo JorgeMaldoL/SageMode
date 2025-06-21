@@ -1,8 +1,21 @@
+certifi==2025.6.15
+charset-normalizer==3.4.2
 click==8.2.1
+filelock==3.18.0
+fsspec==2025.5.1
+hf-xet==1.1.5
+huggingface-hub==0.33.0
+idna==3.10
 markdown-it-py==3.0.0
 mdurl==0.1.2
+packaging==25.0
 Pygments==2.19.1
+PyYAML==6.0.2
+requests==2.32.4
 rich==14.0.0
+-e git+https://github.com/JorgeMaldoL/SageMode.git@89b0097f23cee59596437900292c4fd73b07ecce#egg=sagemode
 shellingham==1.5.4
+tqdm==4.67.1
 typer==0.16.0
 typing_extensions==4.14.0
+urllib3==2.5.0
